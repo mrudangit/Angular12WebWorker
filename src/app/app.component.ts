@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simple-angular';
+  private worker: Worker;
+  constructor() {
+    this.worker = new Worker('test.worker.ts', {type: "module"})
+  }
 }
